@@ -31,7 +31,7 @@ chmod +x script
 ## :floppy_disk::1234: For multiple files 
 
 ```
-./script -f testImages -d destFolder
+./script -f sourceFolder -d destFolder
 ```
 
 :warning: Any destination folder should exist. If not operation will fail.
