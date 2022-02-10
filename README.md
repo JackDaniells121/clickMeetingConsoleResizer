@@ -1,7 +1,7 @@
 
 ## About this project
 
-Php Cli script that resizes :sunrise_over_mountains: images with ftp option
+Php Cli script that resizes :sunrise_over_mountains: images with ftp option. Max side size after resize is set to 150 px.
 
 ## :wrench::bulb: Installation
 ```
