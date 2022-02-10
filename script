@@ -9,6 +9,15 @@ use ClickMeetingRecruitmentTask\PathManager;
 use ClickMeetingRecruitmentTask\ImageResizer;
 use ClickMeetingRecruitmentTask\FtpManager;
 
+//--First run directories setup
+if(!is_dir('temp')) {
+    mkdir('temp',0777, true);
+}
+if(!is_dir('destFolder')) {
+    mkdir('destFolder',0777, true);
+}
+//-----------------------------
+
 $maxSideSizeInPx = 150;
 $tempDirectory = 'temp';
 $options = getopt("f:d:h:l:p:");
