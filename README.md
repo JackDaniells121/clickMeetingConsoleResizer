@@ -37,7 +37,7 @@ chmod +x script
 :warning: Any destination folder should exist. If not operation will fail.
 
 
-## :computer::satellite: Upload files on FTP
+## :computer::satellite: Resize & Upload files on FTP
 
 ```
 ./script -f testImages -d destFolder -h host -l login -p password
