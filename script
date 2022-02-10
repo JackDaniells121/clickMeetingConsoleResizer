@@ -1,0 +1,35 @@
+#!/usr/bin/php
+<?php
+
+include 'PathManager.php';
+include 'ImageResizer.php';
+include 'FtpManager.php';
+
+use ClickMeetingRecruitmentTask\PathManager;
+use ClickMeetingRecruitmentTask\ImageResizer;
+use ClickMeetingRecruitmentTask\FtpManager;
+
+$maxSideSizeInPx = 150;
+$tempDirectory = 'temp';
+$options = getopt("f:d:h:l:p:");
+$pm = new PathManager($options);
+$fm = new FtpManager($options, $tempDirectory);
+
+foreach ($pm->files as $i => $file) {
+
+    $ext = pathinfo($file, PATHINFO_EXTENSION);
+    $fileName = time() . $i . '.' . $ext;
+
+    if ($fm->ftpConnection) {
+
+        $tempFileName = $fm->tempDir . '/' . $fileName;
+        ImageResizer::Resize($file, $tempFileName, $maxSideSizeInPx);
+        $fm->saveFileOnFtp($tempFileName, $fileName);
+        unlink($tempFileName);  
+    }
+    else {
+        
+        $fileName = $pm->destIsDir ? $pm->destination . '/' . $fileName : $pm->destination;
+        ImageResizer::Resize($file, $fileName, $maxSideSizeInPx);
+    }
+}
