@@ -50,15 +50,6 @@ class FtpManager {
         return false;
     }
 
-    function createTempDir()
-    {
-        if ($this->ftpConnection && $this->loginResult) {
-            
-            $this->tempDir = 'temp/temp'.time();
-            mkdir($this->tempDir, 0777, true);
-        }
-    }
-
     function __destruct()
     {
         if ($this->ftpConnection) {
