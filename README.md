@@ -1,17 +1,24 @@
 
-## Installation
+## :wrench: Installation
 ```
 git clone https://github.com/JackDaniells121/clickMeetingConsoleResizer.git
+```
+```
 cd clickMeetingConsoleResizer
+```
+```
 composer install
 ```
 
 Set script permissions to be executable
 ```
 chmod +x script
+```
+
+## :runner: Run 
+```
 ./script
 ```
-## Run
 
 ```
 ./script -f testImages/ak47.jpeg -d testImages/ak47resized.jpeg
