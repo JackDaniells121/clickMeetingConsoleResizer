@@ -48,11 +48,11 @@ In this case destFolder can be ommited, files will be created in temp folder and
 
 ## Options
 
- - -f input file name or folder name
- - -d output file name or destination folder
- - -h remote host name ex. domain.com
- - -l login to ftp account 
- - -p password to ftp account
+ - -f       - input file name or folder name
+ - -d       - output file name or destination folder
+ - -h       - remote host name ex. domain.com
+ - -l       - login to ftp account 
+ - -p       - password to ftp account
 
 ## Thanks for Your time : )
 
