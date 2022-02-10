@@ -36,6 +36,7 @@ chmod +x script
 
 :warning: Any destination folder should exist. If not operation will fail.
 
+
 ## :computer::satellite: Upload files on FTP
 
 ```
@@ -43,6 +44,7 @@ chmod +x script
 ```
 
 In this case destFolder can be ommited, files will be created in temp folder and deleted after operation ends. 
+
 
 ## Options
 
